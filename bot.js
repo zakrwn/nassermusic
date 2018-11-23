@@ -342,6 +342,25 @@ client.on('message', message => {
     }
 });
 
+
+
+client.on('message', msg => {
+
+    if (msg.content == '$join') {
+        if (msg.member.voiceChannel) {
+
+     if (msg.member.voiceChannel.joinable) {
+         msg.member.voiceChannel.join().then(msg.react('✅'));
+     }
+    }
+}
+})
+client.on('ready', () => { //code bot not leave room voice //Bot Is Online
+    client.channels.get("ايدي الروم").join(); //by : iBeAnthonyD
+    });
+
+
+
 const devs = ["295909228328255488"]; //الايدي حقك
 const adminprefix = ["N"]; // البرفكس
 client.on('message', message => {
