@@ -346,22 +346,6 @@ client.on('message', message => {
 
 
 
-client.on('message', msg => {
-
-    if (msg.content == 'Njoin') {
-        if (msg.member.voiceChannel) {
-
-     if (msg.member.voiceChannel.joinable) {
-         msg.member.voiceChannel.join().then(msg.react('✅'));
-     }
-    }
-}
-})
-client.on('ready', () => { //code bot not leave room voice //Bot Is Online
-    client.channels.get("ايدي الروم").join(); //by : iBeAnthonyD
-    });
-
-
 
 
 
